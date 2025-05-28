@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState, useRef } from "react"
-import { useInView } from "framer-motion"
 
 interface CountUpProps {
     end: number
@@ -14,12 +13,11 @@ interface CountUpProps {
 
 export function CountUp({ end, start = 0, duration = 2, decimals = 0, prefix = "", suffix = "" }: CountUpProps) {
     const [count, setCount] = useState(start)
-    const countRef = useRef<HTMLSpanElement>(null)
-    const isInView = useInView(countRef, { once: true, margin: "-100px" })
     const [hasAnimated, setHasAnimated] = useState(false)
+    const countRef = useRef<HTMLSpanElement>(null)
 
     useEffect(() => {
-        if (!isInView || hasAnimated) return
+        if (hasAnimated) return
 
         let startTime: number
         let animationFrame: number
@@ -48,15 +46,15 @@ export function CountUp({ end, start = 0, duration = 2, decimals = 0, prefix = "
                 cancelAnimationFrame(animationFrame)
             }
         }
-    }, [isInView, end, start, duration, hasAnimated])
+    }, [end, start, duration, hasAnimated])
 
     const formattedCount = count.toFixed(decimals).replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 
     return (
         <span ref={countRef}>
-      {prefix}
+            {prefix}
             {formattedCount}
             {suffix}
-    </span>
+        </span>
     )
 }
