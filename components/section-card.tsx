@@ -12,7 +12,7 @@ import {
 export default function SectionCards() {
     return (
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-4 lg:px-6">
-            <Card className="@container/card bg-blue-50 text-primary transition-transform duration-200 hover:scale-105">
+            <Card className="@container/card bg-blue-50 text-primary transition-transform duration-200">
                 <CardHeader className="relative">
                     <CardDescription className="text-black">Happy Clients</CardDescription>
                     <CardTitle className="@[250px]/card:text-3xl text-2xl font-semibold tabular-nums">
@@ -31,7 +31,7 @@ export default function SectionCards() {
                     </div>
                 </CardFooter>
             </Card>
-            <Card className="@container/card bg-blue-50 text-primary transition-transform duration-200 hover:scale-105">
+            <Card className="@container/card bg-blue-50 text-primary transition-transform duration-200">
                 <CardHeader className="relative">
                     <CardDescription className="text-black">Projects Completed</CardDescription>
                     <CardTitle className="@[250px]/card:text-3xl text-2xl font-semibold tabular-nums">
@@ -50,7 +50,7 @@ export default function SectionCards() {
                     </div>
                 </CardFooter>
             </Card>
-            <Card className="@container/card bg-blue-50 text-primary transition-transform duration-200 hover:scale-105">
+            <Card className="@container/card bg-blue-50 text-primary transition-transform duration-200">
                 <CardHeader className="relative">
                     <CardDescription className="text-black">Years Experience</CardDescription>
                     <CardTitle className="@[250px]/card:text-3xl text-2xl font-semibold tabular-nums">
@@ -68,7 +68,7 @@ export default function SectionCards() {
                     </div>
                 </CardFooter>
             </Card>
-            <Card className="@container/card bg-blue-50 text-primary transition-transform duration-200 hover:scale-105">
+            <Card className="@container/card bg-blue-50 text-primary transition-transform duration-200">
                 <CardHeader className="relative">
                     <CardDescription className="text-black">Cost Savings</CardDescription>
                     <CardTitle className="@[250px]/card:text-3xl text-2xl font-semibold tabular-nums">
