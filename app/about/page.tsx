@@ -70,7 +70,7 @@ export default function AboutPage() {
                   <p>
                     Our main goal is to promote the export of services from India to businesses around the world. We
                     focus
-                    on showcasing India's strengths—such as its skilled talent, cost advantages, and strong reputation.
+                    on showcasing India&apos;s strengths—such as its skilled talent, cost advantages, and strong reputation.
                     With these advantages, India is well-positioned to become a global leader in providing top-quality
                     offshore services to international companies.
                   </p>

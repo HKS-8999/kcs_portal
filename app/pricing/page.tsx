@@ -1,4 +1,4 @@
-import { Check, Star, Users, Briefcase, Clock, Shield, Zap, TrendingUp, ArrowRight, Sparkles } from "lucide-react"
+import { Check, Star, Users, Briefcase, Clock, Shield, Zap, TrendingUp, ArrowRight } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -193,7 +193,7 @@ export default function PricingPage() {
 
                           {/* Features */}
                           <div className="mb-8">
-                            <h4 className="font-semibold text-gray-900 mb-6">What's Included</h4>
+                            <h4 className="font-semibold text-gray-900 mb-6">What&apos;s Included</h4>
                             <ul className="space-y-3">
                               {model.features.map((feature, featureIndex) => (
                                   <li key={featureIndex} className="flex items-start gap-3">

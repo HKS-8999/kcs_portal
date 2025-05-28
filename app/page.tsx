@@ -1,6 +1,5 @@
 import {
   Star,
-  TrendingUpIcon,
   BarChart3,
   Clock,
   Lock,
@@ -192,7 +191,7 @@ export default function HomePage() {
                             <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400"/>
                         ))}
                       </div>
-                      <p className="text-gray-600 mb-4 italic">"{testimonial.content}"</p>
+                      <p className="text-gray-600 mb-4 italic">&quot;{testimonial.content}&quot;</p>
                       <p className="font-semibold text-gray-900">- {testimonial.name}</p>
                     </CardContent>
                   </Card>

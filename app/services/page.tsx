@@ -1,10 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { Calculator, FileText, Receipt, PiggyBank, CheckCircle, ArrowRight, Sparkles } from "lucide-react"
+import { Calculator, FileText, Receipt, PiggyBank } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
 
 export default function ServicesPage() {
   const [activeService, setActiveService] = useState(0)

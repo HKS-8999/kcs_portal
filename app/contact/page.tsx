@@ -1,7 +1,5 @@
 "use client"
 
-import Link from "next/link"
-
 import type React from "react"
 
 import { useState } from "react"
@@ -14,9 +12,7 @@ import {
   Clock,
   Send,
   CheckCircle,
-  Sparkles,
   MessageSquare,
-  Calendar,
   Users,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -47,7 +43,7 @@ export default function ContactPage() {
     await new Promise((resolve) => setTimeout(resolve, 2000))
 
     console.log("Form submitted:", formData)
-    alert("Thank you for your inquiry! We'll get back to you within 24 hours.")
+    alert("Thank you for your inquiry! We&apos;ll get back to you within 24 hours.")
     setIsSubmitting(false)
 
     // Reset form
@@ -125,8 +121,8 @@ export default function ContactPage() {
                 <span className="bg-secondary bg-clip-text text-transparent">Touch</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed animate-fade-in-delay max-w-3xl mx-auto">
-                Whether you're looking to explore business opportunities or need more information about our services,
-                we're here to help. Get in touch with us—we'd love to hear from you.
+                Whether you&apos;re looking to explore business opportunities or need more information about our services,
+                we&apos;re here to help. Get in touch with us—we&apos;d love to hear from you.
               </p>
             </div>
           </div>
@@ -148,7 +144,7 @@ export default function ContactPage() {
                         </div>
                         <div>
                           <CardTitle className="text-2xl text-primary">Send us a Message</CardTitle>
-                          <p className="text-gray-600">Fill out the form and we'll get back to you within 24 hours</p>
+                          <p className="text-gray-600">Fill out the form and we&apos;ll get back to you within 24 hours</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
