@@ -29,7 +29,7 @@ export default function Footer() {
                 <span className="text-xl font-bold">KCS</span>
               </Link>
               <p className="text-gray-200 mb-4">
-                Professional accounting services for Australian firms. Delivering quality, reliability, and
+                Professional accounting services for financial accounting firms. Delivering quality, reliability, and
                 cost-effective solutions.
               </p>
               <div className="flex gap-4">
@@ -97,18 +97,18 @@ export default function Footer() {
                 <div className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-gray-200 mt-0.5"/>
                   <div className="text-gray-200">
-                    <p>123 Business Street</p>
-                    <p>Sydney, NSW 2000</p>
-                    <p>Australia</p>
+                    <p>201, Aditya Apartment</p>
+                    <p>Navrang circle,</p>
+                    <p>Ahmedabad, IN - 380014</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-gray-200"/>
-                  <span className="text-gray-200">+61 2 1234 5678</span>
+                  <span className="text-gray-200">+91 8980600104</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-gray-200"/>
-                  <span className="text-gray-200">info@kcsaccounting.com.au</span>
+                  <span className="text-gray-200">connect@kcsglobe.com</span>
                 </div>
               </div>
             </div>

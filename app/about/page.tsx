@@ -1,4 +1,4 @@
-import { Shield, DollarSign, Users, Award, Gift } from "lucide-react"
+import {Shield, DollarSign, Users, Award, Headset, Clock} from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 
@@ -7,27 +7,26 @@ export default function AboutPage() {
     {
       icon: Shield,
       title: "Data Security",
-      description: "Your sensitive information is protected with enterprise-grade security measures",
     },
     {
       icon: DollarSign,
       title: "Cost Arbitrage",
-      description: "Significant cost savings without compromising on quality or service standards",
     },
     {
       icon: Users,
       title: "Qualified Team",
-      description: "Our team consists of qualified accountants, CAs, and CPAs with extensive experience",
     },
     {
       icon: Award,
       title: "Quality Control",
-      description: "Rigorous quality control processes ensure accuracy and compliance in all deliverables",
     },
     {
-      icon: Gift,
-      title: "Free Trial Jobs",
-      description: "Experience our services risk-free with complimentary trial assignments",
+      icon: Clock,
+      title: "Flexible Delivery",
+    },
+    {
+      icon: Headset,
+      title: "24/7 Support",
     },
   ]
 
@@ -39,14 +38,10 @@ export default function AboutPage() {
           <div className="container max-w-7xl mx-auto px-4 relative">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl lg:text-6xl font-bold text-primary mb-6 animate-fade-in">
-                About{" "}
-                <span className="bg-secondary bg-clip-text text-transparent">
-                KCS
+                Our Accounting{" "}
+                <span className="bg-secondary bg-clip-text text-transparent">Services
               </span>
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed animate-fade-in-delay max-w-3xl mx-auto">
-                Empowering businesses of all sizes to succeed in the global market
-              </p>
             </div>
           </div>
         </section>
@@ -55,8 +50,8 @@ export default function AboutPage() {
           <div className="container max-w-7xl mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">Our <span
-                    className='text-secondary'>Story</span></h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">About <span
+                    className='text-secondary'>Us</span></h2>
                 <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                   <p>
                     KCS helps businesses of all sizes succeed in the global market. We offer a full range of outsourcing
@@ -106,11 +101,10 @@ export default function AboutPage() {
                   <Card key={index} className="h-full hover:shadow-lg transition-shadow bg-blue-50">
                     <CardContent className="p-8 text-center">
                       <div
-                          className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-                        <feature.icon className="h-8 w-8 text-primary"/>
+                          className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <feature.icon className="h-12 w-12 text-primary"/>
                       </div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
-                      <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                      <h2 className="text-2xl font-semibold text-gray-900 mb-4">{feature.title}</h2>
                     </CardContent>
                   </Card>
               ))}
@@ -124,7 +118,7 @@ export default function AboutPage() {
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-secondary">Our Mission</h2>
               <p className="text-xl text-blue-100 leading-relaxed">
-                To be the most trusted partner for Australian accounting firms by delivering exceptional quality
+                To be the most trusted partner for financial accounting firms by delivering exceptional quality
                 services,
                 maintaining the highest standards of confidentiality, and providing cost-effective solutions that enable
                 our clients to focus on growing their business and serving their customers better.

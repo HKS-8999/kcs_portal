@@ -104,7 +104,7 @@ export default function HomePage() {
               <div>
                 <h1 className="text-4xl lg:text-6xl font-extrabold mb-6 text-gray-900">
                   <span className="text-secondary">Reliable Offshore Accounting.</span>
-                  <span className="text-gray-700">Trusted by Australian Firms. </span>
+                  <span className="text-gray-700">Trusted by Financial Accounting Firms. </span>
                 </h1>
                 <p className="text-lg text-gray-700 mb-6">
                   KCS delivers expert Bookkeeping, SMSF, Financial Reporting, and Taxation services—tailored, flexible,

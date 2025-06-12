@@ -10,7 +10,16 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "KCS - Professional Accounting Services",
   description:
-    "KCS delivers comprehensive accounting and financial services to Australian corporate and financial services firms. Expert bookkeeping, SMSF, financial reporting and taxation services.",
+    "KCS delivers comprehensive accounting and financial services to financial and accounting services firms. Expert bookkeeping, SMSF, financial reporting and taxation services.",
+  icons: {
+    icon: [
+      {
+        url: "/KCS.svg",
+        sizes: "16x16",
+        type: "image/x-icon",
+      },
+    ],
+  },
 }
 
 export default function RootLayout({

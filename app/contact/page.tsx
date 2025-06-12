@@ -22,6 +22,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
+import {MdEmail} from "react-icons/md";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -98,15 +99,15 @@ export default function ContactPage() {
       details: ["123 Business Street", "Sydney, NSW 2000", "Australia"],
     },
     {
-      icon: Clock,
-      title: "Business Hours",
-      details: ["Monday - Friday: 9:00 AM - 6:00 PM", "Saturday: 10:00 AM - 2:00 PM", "Sunday: Closed"],
+      icon: Phone,
+      title: "Phone No.",
+      details: ["+91 8980600104"],
     },
     {
-      icon: Users,
-      title: "Team Size",
-      details: ["50+ Qualified Professionals", "15+ Years Experience", "500+ Happy Clients"],
-    },
+      icon: MdEmail,
+      title: "Email",
+      details: ["connect@kcsglobe.com"],
+    }
   ]
 
   return (
@@ -117,8 +118,8 @@ export default function ContactPage() {
           <div className="container max-w-7xl mx-auto px-4 relative">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl lg:text-6xl font-bold text-primary mb-6 animate-fade-in">
-                Get In{" "}
-                <span className="bg-secondary bg-clip-text text-transparent">Touch</span>
+                Contact{" "}
+                <span className="bg-secondary bg-clip-text text-transparent">Us</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed animate-fade-in-delay max-w-3xl mx-auto">
                 Whether you&apos;re looking to explore business opportunities or need more information about our services,
@@ -143,7 +144,7 @@ export default function ContactPage() {
                           <Send className="h-6 w-6 text-blue-600"/>
                         </div>
                         <div>
-                          <CardTitle className="text-2xl text-primary">Send us a Message</CardTitle>
+                          <CardTitle className="text-2xl text-primary">Contact Us</CardTitle>
                           <p className="text-gray-600">Fill out the form and we&apos;ll get back to you within 24 hours</p>
                         </div>
                       </div>
@@ -277,14 +278,7 @@ export default function ContactPage() {
                 <div className="space-y-8">
                   {/* Office Information */}
                   <Card className="shadow-xl border-0">
-                    <CardHeader>
-                      <CardTitle className="text-2xl text-gray-900 flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
-                          <MapPin className="h-5 w-5 text-blue-600"/>
-                        </div>
-                        Office Information
-                      </CardTitle>
-                    </CardHeader>
+
                     <CardContent className="space-y-6">
                       {officeInfo.map((info, index) => (
                           <div key={index} className="flex items-start gap-4">
@@ -331,43 +325,6 @@ export default function ContactPage() {
             </div>
           </div>
         </section>
-
-        {/* Contact Methods */}
-        <section className="py-20 bg-white">
-          <div className="container max-w-7xl mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                  Choose Your Preferred Contact Method
-                </h2>
-                <p className="text-xl text-gray-600">Multiple ways to reach us for your convenience</p>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-8 mb-16">
-                {contactMethods.map((method, index) => (
-                    <Card
-                        key={index}
-                        className="text-center p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg"
-                    >
-                      <div
-                          className={`w-16 h-16 rounded-full ${method.bgColor} flex items-center justify-center mx-auto mb-6`}
-                      >
-                        <method.icon className="h-8 w-8 text-primary"/>
-                      </div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{method.title}</h3>
-                      <p className="text-gray-600 mb-4">{method.description}</p>
-                      <p className="font-semibold text-gray-900 mb-6">{method.value}</p>
-                      <Button className={`bg-gradient-to-r ${method.color} hover:opacity-90 text-white`}>
-                        {method.action}
-                      </Button>
-                    </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-
 
         {/* CTA Section */}
       </div>
