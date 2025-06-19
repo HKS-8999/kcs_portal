@@ -6,14 +6,11 @@ import { useState } from "react"
 import {
   MapPin,
   Phone,
-  Mail,
   Linkedin,
   Instagram,
   Clock,
   Send,
-  CheckCircle,
-  MessageSquare,
-  Users,
+  CheckCircle
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -61,36 +58,6 @@ export default function ContactPage() {
   const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }))
   }
-
-  const contactMethods = [
-    {
-      icon: Phone,
-      title: "Phone",
-      description: "Speak directly with our team",
-      value: "+61 2 1234 5678",
-      action: "Call Now",
-      color: "from-primary to-primary",
-      bgColor: "bg-blue-50",
-    },
-    {
-      icon: Mail,
-      title: "Email",
-      description: "Send us a detailed message",
-      value: "info@kcsaccounting.com.au",
-      action: "Send Email",
-      color: "from-primary to-primary",
-      bgColor: "bg-blue-50",
-    },
-    {
-      icon: MessageSquare,
-      title: "Office",
-      description: "Visit our Sydney office",
-      value: "123 Business Street, Sydney, Australia",
-      action: "Start Chat",
-      color: "from-primary to-primary",
-      bgColor: "bg-blue-50",
-    },
-  ]
 
   const officeInfo = [
     {
