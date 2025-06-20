@@ -37,9 +37,9 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
           <div className="container max-w-7xl mx-auto px-4 relative">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl lg:text-6xl font-bold text-primary mb-6 animate-fade-in">
-                Our Accounting{" "}
-                <span className="bg-secondary bg-clip-text text-transparent">Services
+              <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6 animate-fade-in">
+                Empowering Global Success Through {" "}
+                <span className="bg-secondary bg-clip-text text-transparent">Smart Outsourcing
               </span>
               </h1>
             </div>
@@ -118,7 +118,7 @@ export default function AboutPage() {
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-secondary">Our Mission</h2>
               <p className="text-xl text-blue-100 leading-relaxed">
-                To be the most trusted partner for financial accounting firms by delivering exceptional quality
+                To be the most trusted partner for financial and accounting firms by delivering exceptional quality
                 services,
                 maintaining the highest standards of confidentiality, and providing cost-effective solutions that enable
                 our clients to focus on growing their business and serving their customers better.

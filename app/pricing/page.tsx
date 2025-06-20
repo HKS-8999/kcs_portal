@@ -1,22 +1,25 @@
-import { Check, Star, Users, Briefcase, Clock, Shield, Zap, TrendingUp, ArrowRight } from "lucide-react"
+import { Check, Star, Users, Briefcase, Clock, Shield, Zap, TrendingUp } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import Link from "next/link"
 
 export default function PricingPage() {
   const pricingModels = [
     {
       id: "fte",
       name: "FTE Model",
-      subtitle: "Dedicated Resource",
-      description: "A dedicated professional working exclusively for your business as an extension of your team",
+      subtitle: "Dedicated Resource Model",
+      description: "Our FTE model offers a dedicated resource solution, where a full-time professional is\n" +
+          "assigned exclusively to your business. This individual operates as an extension of your\n" +
+          "in-house team, but at a significantly reduced cost.\n" +
+          "\n\nUnder this model, we charge a fixed monthly fee for each dedicated resource, making it\n" +
+          "simple to understand, budget, and implement. The FTE model is ideal for businesses with\n" +
+          "a consistent workflow and the ability to reasonably forecast their future resource needs.",
       icon: Users,
       color: "from-primary to-primary",
       bgColor: "bg-blue-50",
       borderColor: "border-blue-200",
       textColor: "text-primary",
-      popular: true,
+      popular: false,
       features: [
         "Transparent, fixed monthly pricing",
         "Dedicated professionals working exclusively on your projects",
@@ -35,7 +38,13 @@ export default function PricingPage() {
       id: "job",
       name: "Job-to-Job Model",
       subtitle: "Project-Based",
-      description: "Flexible engagement where you pay individually for each project with our entire team support",
+      description: "Our Job-to-Job model is a flexible engagement approach where clients are billed\n" +
+          "individually for each project assigned. This model is ideal for businesses with\n" +
+          "fluctuating workloads, as it allows them to scale their outsourcing needs without\n" +
+          "committing to fixed monthly costs.\n" +
+          "\n\nRather than relying on a single resource, the entire Optimisers team is collectively\n" +
+          "responsible for delivering each project. This ensures continuity and efficiency, with backup professionals always available to meet deadlines and budget\n" +
+          "expectations.",
       icon: Briefcase,
       color: "from-secondary to-secondary",
       bgColor: "bg-orange-50",
@@ -133,7 +142,7 @@ export default function PricingPage() {
         </section>
 
         {/* Pricing Models Side by Side */}
-        <section className="py-20 bg-white">
+        <section className="mt-20 bg-white">
           <div className="container max-w-7xl mx-auto px-4">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
@@ -143,7 +152,7 @@ export default function PricingPage() {
                 </p>
               </div>
 
-              <div className="grid lg:grid-cols-2 gap-8 mb-20">
+              <div className="grid lg:grid-cols-1 gap-8 mb-20">
                 {pricingModels.map((model, index) => (
                     <div key={model.id} className="animate-fade-in-up" style={{ animationDelay: `${index * 200}ms` }}>
                       {/* Model Header */}
@@ -165,54 +174,42 @@ export default function PricingPage() {
                               </Badge>
                           )}
                         </div>
-                        <p className="text-gray-700 leading-relaxed">{model.description}</p>
+                        <p className="text-gray-700 leading-relaxed">{model.description.split('\n\n').map((para, idx) => (
+                            <p key={idx} className="mb-4 text-gray-700">{para}</p>
+                        ))}</p>
                       </div>
 
                       {/* Model Content */}
                       <Card className={`rounded-t-none border-t-0 ${model.borderColor} shadow-xl`}>
-                        <CardContent className="p-8">
+                        <CardContent>
                           {/* Benefits */}
                           <div className="mb-8">
-                            <h4 className="font-semibold text-gray-900 mb-6">Key Benefits</h4>
+                            <h4 className="text-lg font-bold text-gray-900 mb-6">Key Benefits</h4>
                             <div className="space-y-4">
-                              {model.benefits.map((benefit, benefitIndex) => (
-                                  <div key={benefitIndex} className="flex items-start gap-4">
-                                    <div
-                                        className={`w-10 h-10 rounded-full ${model.bgColor} flex items-center justify-center`}
-                                    >
-                                      <benefit.icon className={`h-5 w-5 ${model.textColor}`} />
-                                    </div>
-                                    <div>
-                                      <h5 className="font-semibold text-gray-900 mb-1">{benefit.title}</h5>
-                                      <p className="text-sm text-gray-600">{benefit.description}</p>
-                                    </div>
-                                  </div>
-                              ))}
+
+                              <ul className="space-y-3">
+                                {model.features.map((feature, featureIndex) => (
+                                    <li key={featureIndex} className="flex items-start gap-3">
+                                      <div
+                                          className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+                                        <Check className="h-3 w-3 text-green-600"/>
+                                      </div>
+                                      <span className="font-semibold text-gray-900 mb-1">{feature}</span>
+                                    </li>
+                                ))}
+                              </ul>
                             </div>
                           </div>
 
                           {/* Features */}
-                          <div className="mb-8">
-                            <h4 className="font-semibold text-gray-900 mb-6">What&apos;s Included</h4>
-                            <ul className="space-y-3">
-                              {model.features.map((feature, featureIndex) => (
-                                  <li key={featureIndex} className="flex items-start gap-3">
-                                    <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
-                                      <Check className="h-3 w-3 text-green-600" />
-                                    </div>
-                                    <span className="text-gray-600 text-sm leading-relaxed">{feature}</span>
-                                  </li>
-                              ))}
-                            </ul>
-                          </div>
 
-                          {/* CTA Button */}
-                          <Button asChild className={`w-full bg-gradient-to-r ${model.color} hover:opacity-90 text-white`}>
-                            <Link href="/contact">
-                              Get {model.name} Quote
-                              <ArrowRight className="h-4 w-4 ml-2" />
-                            </Link>
-                          </Button>
+                          {/*/!* CTA Button *!/*/}
+                          {/*<Button asChild className={`w-full bg-gradient-to-r ${model.color} hover:opacity-90 text-white`}>*/}
+                          {/*  <Link href="/contact">*/}
+                          {/*    Get {model.name} Quote*/}
+                          {/*    <ArrowRight className="h-4 w-4 ml-2" />*/}
+                          {/*  </Link>*/}
+                          {/*</Button>*/}
                         </CardContent>
                       </Card>
                     </div>
@@ -315,9 +312,9 @@ export default function PricingPage() {
                         className="text-center p-8 hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:-translate-y-2"
                     >
                       <div
-                          className={`w-16 h-16 rounded-full ${item.bgColor} flex items-center justify-center mx-auto mb-6`}
+                          className={`w-20 h-20 rounded-full ${item.bgColor} flex items-center justify-center mx-auto mb-6`}
                       >
-                        <div className="text-2xl">{item.icon}</div>
+                        <div className="text-3xl">{item.icon}</div>
                       </div>
                       <div
                           className={`text-sm font-bold bg-gradient-to-r ${item.color} bg-clip-text text-transparent mb-2`}

@@ -80,30 +80,29 @@ export default function ContactPage() {
   return (
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 via-orange-50 to-blue-50 py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-blue-50 via-orange-50 to-blue-50 py-15 relative overflow-hidden">
           <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
           <div className="container max-w-7xl mx-auto px-4 relative">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl lg:text-6xl font-bold text-primary mb-6 animate-fade-in">
-                Contact{" "}
-                <span className="bg-secondary bg-clip-text text-transparent">Us</span>
+                Get in{" "}
+                <span className="bg-secondary bg-clip-text text-transparent">Touch</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed animate-fade-in-delay max-w-3xl mx-auto">
-                Whether you&apos;re looking to explore business opportunities or need more information about our services,
-                we&apos;re here to help. Get in touch with us—we&apos;d love to hear from you.
+                Get in touch with us—we&apos;d love to hear from you.
               </p>
             </div>
           </div>
         </section>
 
         {/* Main Contact Section */}
-        <section className="py-20 bg-gradient-to-br from-blue-50 to-orange-50">
+        <section className="bg-gradient-to-br from-blue-50 to-orange-50 py-20">
           <div className="container max-w-7xl mx-auto px-4">
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12">
                 {/* Contact Form */}
                 <div>
-                  <Card className="shadow-xl border-0 overflow-hidden">
+                  <Card className="shadow-xl border-0 overflow-hidden h-full">
                     <div className="h-2 bg-gradient-to-r from-blue-200 to-orange-200"></div>
                     <CardHeader className="pb-6">
                       <div className="flex items-center gap-3 mb-4">
@@ -242,20 +241,20 @@ export default function ContactPage() {
                 </div>
 
                 {/* Contact Information */}
-                <div className="space-y-8">
+                <div className="flex flex-col gap-8">
                   {/* Office Information */}
-                  <Card className="shadow-xl border-0">
+                  <Card className="shadow-xl border-0 flex-grow">
 
-                    <CardContent className="space-y-6">
+                    <CardContent className="space-y-12">
                       {officeInfo.map((info, index) => (
                           <div key={index} className="flex items-start gap-4">
-                            <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center mt-1">
-                              <info.icon className="h-5 w-5 text-orange-600"/>
+                            <div className="w-15 h-15 rounded-full bg-orange-50 flex items-center justify-center mt-1">
+                              <info.icon className="h-8 w-8 text-orange-600"/>
                             </div>
                             <div>
-                              <h4 className="font-semibold text-gray-900 mb-2">{info.title}</h4>
+                              <h4 className="font-semibold text-gray-900 mb-2 text-2xl">{info.title}</h4>
                               {info.details.map((detail, detailIndex) => (
-                                  <p key={detailIndex} className="text-gray-600 text-sm">
+                                  <p key={detailIndex} className="text-gray-600 text-lg">
                                     {detail}
                                   </p>
                               ))}

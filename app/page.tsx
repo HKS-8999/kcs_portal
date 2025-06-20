@@ -13,20 +13,14 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
 import Image from "next/image"
-import { SiXero, SiQuickbooks, SiMyob, SiGoogleclassroom } from "react-icons/si"
-import { FaHandHoldingUsd } from "react-icons/fa"
-import { MdOutlineClass } from "react-icons/md"
-import { BsFillFileEarmarkCheckFill } from "react-icons/bs"
-import { AiOutlineAudit } from "react-icons/ai"
 
-
-import SectionCards  from '@/components/section-card'
+import ServicesOverview from "@/components/services-overview";
 
 export default function HomePage() {
   const benefits = [
     {
       icon: BarChart3,
-      title: "Exceptional Quality Work",
+      title: "Quality Work",
       description: "Consistently high-quality deliverables that meet or exceed industry standards",
     },
     {
@@ -83,17 +77,25 @@ export default function HomePage() {
   ]
 
   const compatibleSoftware = [
-    { name: "Xero", icon: SiXero },
-    { name: "Quickbooks", icon: SiQuickbooks },
-    { name: "MYOB", icon: SiMyob },
-    { name: "Handi", icon: FaHandHoldingUsd },
-    { name: "Class", icon: MdOutlineClass },
-    { name: "BGL", icon: BsFillFileEarmarkCheckFill },
-    { name: "SimpleFund 360", icon: SiGoogleclassroom },
-    { name: "SMSF Audit", icon: AiOutlineAudit },
+    { name: "Xero", logo: "/xero.jpeg" },
+    { name: "Quickbooks", logo: "/quickbooks.jpeg" },
+    { name: "MYOB", logo: "/myob.jpeg" },
+    { name: "Sage", logo: "sage.jpeg" },
+    { name: "Class", logo: "/class.jpeg" },
+    { name: "BGL", logo: "/bgl.jpeg" },
+    { name: "SimpleFund 360", logo: "/simpleFund360.jpeg" },
+    { name: "SMSF Audit", logo: "/onlinesmf.jpeg" },
   ]
 
+  const associated = [
+    { name: "CPA Australia", logo: "/Logo_of_CPA_Australia.png" },
+    { name: "CA", logo: "/Logo_of_CA_Australia-removebg-preview.png" }
+  ]
 
+  const certificates = [
+    { name: "ISO Certified 9001", logo: "/ISO_9001.jpeg" },
+    { name: "ISO Certified 27001", logo: "/ISO_27001.jpeg" }
+  ]
 
   return (
       <div className="min-h-screen ">
@@ -102,13 +104,13 @@ export default function HomePage() {
           <div className="container max-w-7xl mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h1 className="text-4xl lg:text-6xl font-extrabold mb-6 text-gray-900">
-                  <span className="text-secondary">Reliable Offshore Accounting.</span>
-                  <span className="text-gray-700">Trusted by Financial Accounting Firms. </span>
+                <h1 className="text-4xl lg:text-5xl font-extrabold mb-6 text-gray-900">
+                  <span className="block text-secondary mb-2">Reliable Offshore Accounting.</span>
+                  <span className="block text-primary">Trusted by Financial and Accounting Firms. </span>
                 </h1>
                 <p className="text-lg text-gray-700 mb-6">
-                  KCS delivers expert Bookkeeping, SMSF, Financial Reporting, and Taxation services—tailored, flexible,
-                  and cost-effective. Backed by qualified accountants and overseen by experienced CAs and CPAs.
+                  Tailored, cost-effective support in Bookkeeping, SMSF, Reporting & Taxation by qualified
+                  professionals.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild size="lg" className="bg-primary hover:bg-blue-800 text-white font-semibold shadow">
@@ -122,11 +124,10 @@ export default function HomePage() {
               </div>
               <div className="flex justify-center items-center">
                 <Image
-                    src="/bookkeeping_hero.svg?height=400&width=500"
+                    src="/Map SVG.svg"
                     alt="Professional accounting team at KCS"
-                    width={500}
+                    width={650}
                     height={400}
-                    className="rounded-lg subtle-bounce"
                     priority
                 />
               </div>
@@ -134,15 +135,20 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section className="py-20 bg-white">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">Our Performance</h2>
-            <p className="text-xl text-gray-600">Numbers that speak for our excellence and reliability</p>
-          </div>
-          <div className="container max-w-7xl  mx-auto px-4">
-            <SectionCards/>
-          </div>
-        </section>
+
+        <ServicesOverview></ServicesOverview>
+
+
+        {/*<section className="py-20 bg-white">*/}
+        {/*  <div className="text-center mb-16">*/}
+        {/*    <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">Our Performance</h2>*/}
+        {/*    <p className="text-xl text-gray-600">Numbers that speak for our excellence and reliability</p>*/}
+        {/*  </div>*/}
+        {/*  <div className="container max-w-7xl  mx-auto px-4">*/}
+        {/*    <SectionCards/>*/}
+        {/*  </div>*/}
+        {/*</section>*/}
+
         {/* Benefits Section */}
         <section className="py-20 bg-gray-100">
           <div className="container max-w-7xl mx-auto px-4 space-y-8">
@@ -161,10 +167,10 @@ export default function HomePage() {
                     <div className="h-1.5 bg-gradient-to-r from-orange-300 to-orange-400"></div>
                     <CardContent className="p-6">
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
-                          <benefit.icon className="h-4 w-4 text-blue-600"/>
+                        <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                          <benefit.icon className="h-5 w-5 text-blue-600"/>
                         </div>
-                        <h4 className="font-bold text-md text-primary">{benefit.title}</h4>
+                        <h4 className="font-bold text-lg text-primary">{benefit.title}</h4>
                       </div>
                       <p className="text-sm text-blue-900">{benefit.description}</p>
                     </CardContent>
@@ -174,78 +180,65 @@ export default function HomePage() {
           </div>
         </section>
 
+
         {/* Testimonials Section */}
-        <section className="py-20 bg-white">
-          <div className="container max-w-7xl mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">What Our <span
-                  className="text-secondary">Clients</span> Say</h2>
-              <p className="text-xl text-gray-600">Real feedback from satisfied clients</p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                  <Card key={index} className="h-full bg-blue-50">
-                    <CardContent className="p-6">
-                      <div className="flex mb-4">
-                        {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400"/>
-                        ))}
-                      </div>
-                      <p className="text-gray-600 mb-4 italic">&quot;{testimonial.content}&quot;</p>
-                      <p className="font-semibold text-gray-900">- {testimonial.name}</p>
-                    </CardContent>
-                  </Card>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Compatible Software Section */}
-        <section className="py-20 bg-gray-100">
+
+        {/* Compatible Software & Certificates Section */}
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-4">
-              <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
-                Our Team is <span className="text-secondary">Compatible</span> with
-              </h2>
-              <p className="text-xl text-gray-600">We work seamlessly with all major accounting software</p>
-            </div>
+            {/* Compatible Software */}
+            <div className="mb-30">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
+                  Our Team is <span className="text-secondary">Compatible</span> with
+                </h2>
+              </div>
 
-            <div className="relative max-w-7xl mx-auto">
-              {/* Gradient overlays for smooth fade effect */}
-              <div
-                  className="absolute top-0 bottom-0 left-0 w-20 bg-gradient-to-r from-blue-50 to-transparent z-10 pointer-events-none"></div>
-              <div
-                  className="absolute top-0 bottom-0 right-0 w-20 bg-gradient-to-l from-blue-50 to-transparent z-10 pointer-events-none"></div>
-
-              {/* Scrolling container */}
-              <div className="overflow-hidden py-8">
-                <div className="flex animate-scroll-horizontal">
-                  {/* First set of software items */}
+              <div className="max-w-6xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                   {compatibleSoftware.map((software, index) => (
                       <div
-                          key={`first-${index}`}
-                          className="flex-shrink-0 mx-4 w-64 p-6 bg-blue-100 rounded-xl hover:bg-blue-200 transition-colors"
+                          key={index}
+                          className="flex items-center justify-center"
                       >
-                        <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 bg-blue-100 rounded-lg shadow-sm flex items-center justify-center">
-                            <software.icon className="w-8 h-8 text-primary"/>
-                          </div>
-                          <span className="font-medium text-gray-900 text-lg">{software.name}</span>
-                        </div>
+                        <Image
+                            src={software.logo || "/placeholder.svg"}
+                            alt={`${software.name} logo`}
+                            width={140}
+                            height={80}
+                            className="object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                        />
                       </div>
                   ))}
+                </div>
+              </div>
+            </div>
 
-                  {/* Duplicate set for seamless loop */}
-                  {compatibleSoftware.map((software, index) => (
+            {/* Certificates Section */}
+            <div>
+              <div className="text-center mb-12 mt-20">
+                <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
+                  Certificates of <span className="text-secondary">Registration</span>
+                </h2>
+              </div>
+
+              <div className="max-w-4xl mx-auto">
+                <div className="flex justify-center items-center gap-10">
+                  {certificates.map((certificate, index) => (
                       <div
-                          key={`second-${index}`}
-                          className="flex-shrink-0 mx-4 w-64 p-6 bg-blue-100 rounded-xl hover:bg-blue-200 transition-colors"
+                          key={index}
+                          className="flex flex-col items-center mt-4"
                       >
-                        <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 bg-blue-100 rounded-lg shadow-sm flex items-center justify-center">
-                            <software.icon className="w-8 h-8 text-primary"/>
-                          </div>
-                          <span className="font-medium text-gray-900 text-lg">{software.name}</span>
+                        <div className="mb-8">
+                          <Image
+                              src={certificate.logo || "/placeholder.svg"}
+                              alt={`${certificate.name} logo`}
+                              width={180}
+                              height={180}
+                              className="object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                          />
                         </div>
                       </div>
                   ))}
@@ -255,18 +248,65 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-blue-900">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-secondary mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients who trust KCS for their accounting needs.
-            </p>
-            <Button asChild size="lg" variant="secondary">
-              <Link href="/contact">Contact Us Today</Link>
-            </Button>
+
+
+        {/* Testimonials Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container max-w-7xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">Testimonials</h2>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                  <Card key={index} className="h-full">
+                    <CardContent className="p-6">
+                      <div className="flex mb-4">
+                        {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400"/>
+                        ))}
+                      </div>
+                      <p className="text-gray-600 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
+                      <p className="font-semibold text-gray-900">- {testimonial.name}</p>
+                    </CardContent>
+                  </Card>
+              ))}
+            </div>
           </div>
         </section>
+
+        {/* Associated Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-4">
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary">We are <span
+                  className="text-secondary">Associated</span> with</h2>
+            </div>
+            <div className="flex justify-center gap-12">
+              {associated.map((association, index) => (
+                  <div key={index} className="flex flex-col items-center justify-center">
+                    <Image src={association.logo} alt={`${association} logo`} width={180}
+                           height={180}/>
+                    {/*<span className="font-semibold text-gray-900 text-lg">{association}</span>*/}
+                  </div>
+              ))}
+            </div>
+
+          </div>
+        </section>
+
+        {/* Compatible Software Section */}
+        {/* CTA Section */}
+        {/*<section className="py-20 bg-blue-900">*/}
+        {/*  <div className="container mx-auto px-4 text-center">*/}
+        {/*    <h2 className="text-3xl lg:text-4xl font-bold text-secondary mb-4">Ready to Transform Your Business?</h2>*/}
+        {/*    <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">*/}
+        {/*      Join hundreds of satisfied clients who trust KCS for their accounting needs.*/}
+        {/*    </p>*/}
+        {/*    <Button asChild size="lg" variant="secondary">*/}
+        {/*      <Link href="/contact">Contact Us Today</Link>*/}
+        {/*    </Button>*/}
+        {/*  </div>*/}
+        {/*</section>*/}
       </div>
   )
 }
