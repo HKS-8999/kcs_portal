@@ -1,11 +1,9 @@
 "use client"
 
-import { useState } from "react"
 import {Calculator, FileText, Receipt, PiggyBank, CheckCircle} from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 
 export default function ServicesPage() {
-  const [activeService, setActiveService] = useState(0)
 
   const services = [
     {
@@ -249,7 +247,7 @@ export default function ServicesPage() {
         <section className="mb-20 bg-white mt-12">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto space-y-16">
-              {services.map((service, index) => (
+              {services.map((service) => (
                   <Card
                       key={service.id}
                       className="overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-300"
@@ -271,7 +269,7 @@ export default function ServicesPage() {
 
                         {/* Right Side - Bullet Points */}
                         <div className="p-12 bg-white">
-                          <h3 className="text-2xl font-semibold text-gray-900 mb-8">What's Included:</h3>
+                          <h3 className="text-2xl font-semibold text-gray-900 mb-8">What&apos;s Included:</h3>
                           <div className="grid grid-cols-1 gap-4">
                             {service.items.map((item, itemIndex) => (
                                 <div key={itemIndex} className="flex items-start gap-3">

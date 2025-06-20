@@ -1,4 +1,4 @@
-import {Calculator, FileText, Receipt, PiggyBank, CheckCircle, Clock, Smile} from "lucide-react"
+import {Calculator, FileText, Receipt, PiggyBank, CheckCircle, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { CountUp } from "@/components/count-up"
 import Link from "next/link"

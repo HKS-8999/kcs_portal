@@ -63,7 +63,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Address",
-      details: ["123 Business Street", "Sydney, NSW 2000", "Australia"],
+      details: ["201, Aditya Apartment", "Navrang circle,", "Ahmedabad, IN - 380014"],
     },
     {
       icon: Phone,
