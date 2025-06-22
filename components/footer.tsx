@@ -39,13 +39,13 @@ export default function Footer() {
               </p>
               <div className="flex gap-4">
                 <a
-                    href="#"
+                    href="https://www.linkedin.com/company/kabraconsultancyservices/"
                     className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-secondary transition-colors"
                 >
                   <Linkedin className="h-5 w-5 text-gray-900"/>
                 </a>
                 <a
-                    href="#"
+                    href="https://www.instagram.com/kabraconsultancyservices"
                     className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-secondary transition-colors"
                 >
                   <Instagram className="h-5 w-5 text-gray-900"/>

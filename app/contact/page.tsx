@@ -272,13 +272,13 @@ export default function ContactPage() {
                     <CardContent>
                       <div className="flex gap-4">
                         <a
-                            href="#"
+                            href="https://www.linkedin.com/company/kabraconsultancyservices/"
                             className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors group"
                         >
                           <Linkedin className="h-6 w-6 text-blue-600 group-hover:scale-110 transition-transform"/>
                         </a>
                         <a
-                            href="#"
+                            href="https://www.instagram.com/kabraconsultancyservices"
                             className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center hover:bg-orange-200 transition-colors group"
                         >
                           <Instagram className="h-6 w-6 text-orange-600 group-hover:scale-110 transition-transform"/>

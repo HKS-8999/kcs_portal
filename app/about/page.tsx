@@ -71,13 +71,13 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              <div className="relative">
+              <div className="relative p-8">
                 <Image
-                    src="/kcs_team_collab.jpg?height=500&width=600"
+                    src="/bookkeeping_hero.svg"
                     alt="KCS team collaboration"
-                    width={600}
+                    width={550}
                     height={500}
-                    className="rounded-lg shadow-xl"
+                    className="subtle-bounce"
                 />
               </div>
             </div>
